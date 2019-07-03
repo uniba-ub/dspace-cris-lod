@@ -1351,7 +1351,7 @@ public class PushToORCID
             // delete all values not in the current system both in the history
             // then into Orcid Registry
             List<OrcidHistory> histories = applicationService
-                    .findOrcidHistoryByOrcidAndEntityUUIDAndTypeId(orcid, value, CrisConstants.PROJECT_TYPE_ID);
+            		.findOrcidHistoryByOrcidAndEntityAndTypeId(orcid, value, CrisConstants.PROJECT_TYPE_ID);
             for (OrcidHistory history : histories)
             {
                 if (history.getTimestampLastAttempt() != null)
@@ -1593,14 +1593,14 @@ public class PushToORCID
 
     /**
      * At the minimum, the work must include the following elements: 1) Work
-     * title 2) Work type 3) Unique work identifier—add as many of these as your
+     * title 2) Work type 3) Unique work identifierâ€”add as many of these as your
      * system is aware; it aids in grouping on ORCID records, so researchers
-     * don’t have to group works manually (Work identifier type, Value of the
+     * donâ€™t have to group works manually (Work identifier type, Value of the
      * identifier, Identifier URL (optional), Relationship: self/part of This is
      * to indicate the relationship of the work to the identifier. For example,
      * if the work is a book chapter, and the identifier is the ISBN for the
-     * book, then the relationship would be “part of”; if the identifier is the
-     * DOI for the book chapter itself, then the relationship would be “self”)
+     * book, then the relationship would be â€œpart ofâ€�; if the identifier is the
+     * DOI for the book chapter itself, then the relationship would be â€œselfâ€�)
      * 
      * We also suggest that you include all other known metadata available for a
      * work , in particular: 4) Publication date, which aids display sorting 4)
@@ -1652,7 +1652,7 @@ public class PushToORCID
             // delete all values not in the current system both in the history
             // then into Orcid Registry
             List<OrcidHistory> histories = applicationService
-                    .findOrcidHistoryByOrcidAndEntityUUIDAndTypeId(orcid, value, Constants.ITEM);
+                    .findOrcidHistoryByOrcidAndEntityAndTypeId(orcid, value, Constants.ITEM);
             for (OrcidHistory history : histories)
             {
                 if (history.getTimestampLastAttempt() != null)
