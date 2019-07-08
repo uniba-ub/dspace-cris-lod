@@ -181,14 +181,12 @@ public abstract class ACrisObject<P extends Property<TP>, TP extends PropertiesD
 		Map<Integer, String> mapResultsAuth = new HashMap<Integer, String>();
 	    String authority = null;
 		if ("crisdo".equals(schema) && "name".equals(element)) {
-			
 		    String val = getName();
 		    if(StringUtils.isBlank(val)) {
 		        val = "";
 		    }
 		    mapResultsVal.put(mapResultsVal.hashCode(), val);
 		} else if (!schema.equalsIgnoreCase("cris" + this.getPublicPath())) {
-			
 			//perhaps is a nested
 			boolean buildMetadata = false;
 			if (StringUtils.isNotEmpty(element)) {
@@ -206,7 +204,6 @@ public abstract class ACrisObject<P extends Property<TP>, TP extends PropertiesD
 					if (nProprieties != null) {
 						for (NP prop : nProprieties) {
 							Object val = prop.getObject();
-							
 							if (StringUtils.isNotEmpty(qualifier) && val instanceof ACrisObject) {
 								authority = ResearcherPageUtils.getPersistentIdentifier((ACrisObject) val);								
 								qualifier = getCompatibleJDynAShortName((ACrisObject) val, qualifier);
@@ -237,8 +234,6 @@ public abstract class ACrisObject<P extends Property<TP>, TP extends PropertiesD
 				}				
 			}
 			else {
-				 
-		           
 			    schema = getCompatibleJDynAShortName(this, schema);
 
 	            List<P> proprieties = this.getAnagrafica4view().get(schema);
@@ -246,7 +241,6 @@ public abstract class ACrisObject<P extends Property<TP>, TP extends PropertiesD
 	            if (proprieties != null && !proprieties.isEmpty()) {
 	                for (P prop : proprieties) {
 	                    Object val = prop.getObject();
-	                    
 	                    if (StringUtils.isNotEmpty(element) && val instanceof ACrisObject) {
 	                        
 	                        authority = ResearcherPageUtils.getPersistentIdentifier((ACrisObject) val);
@@ -278,16 +272,12 @@ public abstract class ACrisObject<P extends Property<TP>, TP extends PropertiesD
 				return new Metadatum[0];
 			}
 		} else {
-			
 			element = getCompatibleJDynAShortName(this, element);
 
 			List<P> proprieties = this.getAnagrafica4view().get(element);
 
 			if (proprieties != null && !proprieties.isEmpty()) {
 				for (P prop : proprieties) {
-
-					
-					
 					Object val = prop.getObject();
 					if (StringUtils.isNotEmpty(qualifier) && val instanceof ACrisObject) {
 					    
@@ -319,8 +309,7 @@ public abstract class ACrisObject<P extends Property<TP>, TP extends PropertiesD
 		}
 		int idx = 0;
 		for (Integer key : mapResultsVal.keySet()) {
-
-			result[idx] = new Metadatum();	
+			result[idx] = new Metadatum();
 			result[idx].schema = schema;
 			result[idx].element = element;
 			result[idx].qualifier = qualifier;

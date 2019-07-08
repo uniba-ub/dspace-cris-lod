@@ -40,9 +40,6 @@ public class CrisIDListener implements NativePostUpdateEventListener {
 				String crisID = ResearcherPageUtils.getPersistentIdentifier(crisObj);
 				crisObj.setCrisID(crisID);
 			}
-			//add RDF-Generating for CRIS-Object here
-			//delete or update?
-			
 		} catch (Exception e) {
 			log.error("Failed to build CRISID for entity " + crisObj.getTypeText() + "/" + crisObj.getCrisID());
 		}

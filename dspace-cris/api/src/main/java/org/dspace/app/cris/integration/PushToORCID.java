@@ -1593,14 +1593,14 @@ public class PushToORCID
 
     /**
      * At the minimum, the work must include the following elements: 1) Work
-     * title 2) Work type 3) Unique work identifierâ€”add as many of these as your
+     * title 2) Work type 3) Unique work identifier—add as many of these as your
      * system is aware; it aids in grouping on ORCID records, so researchers
-     * donâ€™t have to group works manually (Work identifier type, Value of the
+     * don’t have to group works manually (Work identifier type, Value of the
      * identifier, Identifier URL (optional), Relationship: self/part of This is
      * to indicate the relationship of the work to the identifier. For example,
      * if the work is a book chapter, and the identifier is the ISBN for the
-     * book, then the relationship would be â€œpart ofâ€�; if the identifier is the
-     * DOI for the book chapter itself, then the relationship would be â€œselfâ€�)
+     * book, then the relationship would be “part of”; if the identifier is the
+     * DOI for the book chapter itself, then the relationship would be “self”)
      * 
      * We also suggest that you include all other known metadata available for a
      * work , in particular: 4) Publication date, which aids display sorting 4)
