@@ -1,4 +1,6 @@
-DSpace CRIS Integration
-=======================
+Overview
+========
 
-Check the Wiki: https://wiki.duraspace.org/display/DSPACECRIS/DSpace-CRIS+Home
+We have adapted the RDF module of DSpace by Pascal Becker (https://wiki.duraspace.org/display/DSDOC5x/Linked+%28Open%29+Data) to handle DSpace-CRIS entities.
+
+See also https://github.com/4Science/DSpace/pull/88 for discussion.
